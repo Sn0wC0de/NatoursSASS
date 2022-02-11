@@ -3,6 +3,8 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 52rem;
+
+
    
 
     &__side{
@@ -147,4 +149,64 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+
+
+    @include respond(tab-port) {
+        height: auto;
+        border-radius: 10px;
+        background-color:  $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+
+    
+       
+    
+        &__side{
+        // background-color: orangered;
+        height: auto;
+        position: relative ;
+        box-shadow: none;
+
+        
+    
+           
+            &--back{
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0deg);
+        }
+       
+        
+        // Back side styling
+    
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+        &__price-value{
+            font-size: 6rem;        }
+            }
+
+        &__btn {
+            margin-left: 5rem;
+        }
+
+        @include  respond(phone) {
+            &__btn {
+              
+            }
+        }
+
 }
