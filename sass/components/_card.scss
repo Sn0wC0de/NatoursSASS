@@ -144,9 +144,11 @@
     }
     &__price-only{
         font-size: $default-font-size;
+
+       
     }
     &__price-value{
-        font-size: 6rem;
+        font-size: 4rem;
         font-weight: 100;
     }
 
@@ -199,13 +201,17 @@
             font-size: 6rem;        }
             }
 
-        &__btn {
-            margin-left: 5rem;
+        &_price-only{
+            font-size: 3rem;
+    
+            
         }
 
-        @include  respond(phone) {
-            &__btn {
-              
+        &__btn{
+            margin: 2rem 19rem;
+
+            @include respond(phone) {
+                margin: 2rem 12rem;
             }
         }
 
